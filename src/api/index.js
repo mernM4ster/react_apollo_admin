@@ -232,6 +232,8 @@ export const getAttributeTerm = function ( attrId, id ) {
 export const getProducts = function ( from = 0, to, filters, sortBy, withVariants = false ) {
     const data = {
         query: `query($demo: Int!)  { products(demo: $demo) { data {
+            _id
+            id
             name
             slug
             price
